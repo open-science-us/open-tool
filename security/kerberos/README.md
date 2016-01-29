@@ -20,11 +20,11 @@ sudo vi /etc/krb5.conf
 
 /usr/sbin/kdb5_util create -s
 
-# master key name 'K/M@TPS.COM'  password: abc123
+# master key name 'K/M@TPS.COM'  password: XXXXXXX
 
 /usr/sbin/kdb5_util create -s -r TPS.COM
 
-# master key name 'K/M@TPS.COM'  password: abc123
+# master key name 'K/M@TPS.COM'  password: XXXXXXX
 
 sudo vi /var/kerberos/krb5kdc/kadm5.acl
 
