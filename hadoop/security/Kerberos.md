@@ -3,6 +3,7 @@
 ## Reference
 
 (1) [Hadoop in Secure Mode](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SecureMode.html)
+
 (2) [Installation and Configuration on Amazon EC2](https://github.com/open-science-us/open-tool/tree/master/security/kerberos)
 
 ## Adding Kerberos principals
