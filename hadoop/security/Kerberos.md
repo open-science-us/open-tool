@@ -41,4 +41,21 @@ xst -k nm.service.keytab nm/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG host/ip-1
 xst -k jhs.service.keytab jhs/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG host/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG
 ~~~
 
+## Listing Kerberos principals in Kerberos keytab files
+~~~
+klist -e -k -t nn.service.keytab
+
+Keytab name: FILE:nn.service.keytab
+KVNO Timestamp           Principal
+---- ------------------- ------------------------------------------------------
+   2 02/01/2016 15:34:35 nn/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG (aes256-cts-hmac-sha1-96) 
+   2 02/01/2016 15:34:35 nn/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG (aes128-cts-hmac-sha1-96) 
+   2 02/01/2016 15:34:35 nn/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG (des3-cbc-sha1) 
+   2 02/01/2016 15:34:35 nn/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG (arcfour-hmac) 
+   2 02/01/2016 15:34:35 host/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG (aes256-cts-hmac-sha1-96) 
+   2 02/01/2016 15:34:35 host/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG (aes128-cts-hmac-sha1-96) 
+   2 02/01/2016 15:34:35 host/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG (des3-cbc-sha1) 
+   2 02/01/2016 15:34:35 host/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG (arcfour-hmac) 
+~~~
+
 
