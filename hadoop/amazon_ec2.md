@@ -116,11 +116,11 @@ vi etc/hadoop/mapred-site.xml
     </property>
     <property>
         <name>mapreduce.jobhistory.intermediate-done-dir</name>
-        <value>/var/lib/hadoop/apache-2.6.3/mapred</value>
+        <value>/mnt/hadoop/apache-2.6.3/jh</value>
     </property>
     <property>
         <name>mapreduce.jobhistory.done-dir</name>
-        <value>/var/lib/hadoop/apache-2.6.3/mapred</value>
+        <value>/mnt/hadoop/apache-2.6.3/jh</value>
     </property>
 </configuration>
 
