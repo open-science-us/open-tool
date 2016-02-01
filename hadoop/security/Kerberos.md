@@ -58,4 +58,7 @@ KVNO Timestamp           Principal
    2 02/01/2016 15:34:35 host/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG (arcfour-hmac) 
 ~~~
 
-
+### Authentication with Kerberos keytab file
+~~~
+kinit -k -t hdfs.keytab hdfs/ip-172-30-2-101.ec2.internal@OPEN_TOOL.ORG
+~~~
