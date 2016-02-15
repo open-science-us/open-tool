@@ -1,6 +1,6 @@
-### Integration with Hive
+## Integration with Hive
 
-#### Building Spark package with Hive
+### Building Spark package with Hive
 ~~~
 cd /work/spark-hive
 
@@ -13,7 +13,7 @@ cd spark-1.6.0
 build/mvn -DskipTests -Phive -Phive-thriftserver clean package
 ~~~
 
-#### Configuring Spark to integrate with Hive
+### Configuring Spark to integrate with Hive
 ~~~
 cd /work/spark-hive/spark-1.6.0
 
@@ -87,4 +87,17 @@ http://localhost:4040		(driver)
 
 
 bin/spark-shell --master spark://localhost:7077 --jars /work/hive/apache-hive-1.2.1-bin/lib/mysql-connector-java-5.1.38.jar
+~~~
+
+### Testing
+~~~
+val sqlContext = new org.apache.spark.sql.hive.HiveContext(sc)
+
+sqlContext.sql("CREATE TABLE IF NOT EXISTS test (key INT, value STRING)")
+
+sqlContext.sql("LOAD DATA LOCAL INPATH '/work/hive/apache-hive-1.2.1-bin/examples/files/kv1.txt' INTO TABLE test")
+
+sqlContext.sql("FROM test SELECT key, value").collect().foreach(println)
+
+sqlContext.sql("FROM pokes SELECT foo, bar").collect().foreach(println)
 ~~~
