@@ -14,7 +14,7 @@ curl --user <user>:<password> -OL http://downloads.datastax.com/enterprise/dse.t
 
 tar -xzvf dse.tar.gz
 
-cd dse-4.8.2
+cd dse-4.8.4
 
 cd resources/cassandra/conf
 
