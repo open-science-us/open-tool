@@ -39,7 +39,7 @@ vi dse.in.sh
 export CASSANDRA_LOG_DIR="/var/log/dse”
 
 
-# start with Spark
+# start with Spark v1.4.2
 
 bin/dse cassandra -k
 
